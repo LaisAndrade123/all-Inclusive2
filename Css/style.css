@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lobster&family=Pacifico&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+/* Menu lateral fixo */
+.side-menu {
+    width: 250px;
+    background-color: #1a1c1d;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 19px;
+}
+
+.profile p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-links {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+.menu-links li {
+    width: 100%;
+}
+
+.menu-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+}
+
+.menu-links i {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+
+}
+
+.menu-links a:hover {
+    background-color: #111113;
+    color: #00bdde;
+}
+
+.menu-links a:hover i {
+    color: #00bebb;
+}
+
+
+
+
+
+/* Conteúdo principal */
+.main-content {
+    margin-left: 250px; /* Espaço para o menu lateral */
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(to bottom right, #0a1635, #0063a0); /* Degradê azul escuro para azul claro */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner-overlay {
+    background-color: rgba(13, 28, 78, 0); /* Fundo escurecido para destacar o texto */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 50px;
+    font-family: "Lobster", sans-serif;
+}
+
+
+.banner p {
+    font-size: 20px;
+    font-family: "Roboto Condensed", sans-serif
+}
+
+/* Estilo da barra de pesquisa */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    width: 350px;
+    border: 2px solid #091f40; /* Borda azul escura */
+    border-radius: 5px 0 0 5px;
+}
+
+.search-btn {
+    padding: 10px;
+    background-color: #0D47A1; /* Botão azul escuro */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-btn:hover {
+    background-color: #003a7d; /* Azul mais claro ao passar o mouse */
+}
+
+
+/* Grade de Empresas */
+.empresa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.empresa-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.empresa-card:hover {
+    transform: translateY(-10px);
+}
+
+.empresa-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.empresa-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.empresa-info h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.empresa-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.detalhes-btn, .curriculo-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.detalhes-btn {
+    background-color: #424242;
+    color: white;
+}
+
+.curriculo-btn {
+    background-color: #0078c8;
+    color: white;
+}
+
+.detalhes-btn:hover {
+    background-color: #2a2a2a;
+}
+
+.curriculo-btn:hover {
+    background-color: #00518b;
+}
+
+/* Seção de Comentários */
+.comments-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.comments-section h2, .comments-section h3 {
+    color: #333;
+    font-family: "Abel", sans-serif;
+    margin: 15px;
+}
+
+.comment-form {
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #1976D2;
+}
+
+.comment-list {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.comment-list p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#ver-mais-btn {
+    background-color: #3d3d3d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#ver-mais-btn:hover {
+    background-color: #222222;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    margin-top: 20px;
+}
